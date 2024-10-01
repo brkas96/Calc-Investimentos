@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import CdbCalculator from './components/CdbCalc';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <h1 className="text-center my-4">Ferramentas de Cálculo de Investimentos</h1>
+        
+        <div className="row">
+          <div className="col-md-4">
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">Cálculo de CDB com CDI</h5>
+                <p className="card-text">Calcule os rendimentos de investimentos em CDB com base na taxa CDI atual.</p>
+                <Link to="/cdb" className="btn btn-primary">Calcular</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Routes>
+          <Route path="/cdb" element={<CdbCalculator />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
