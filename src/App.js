@@ -6,7 +6,9 @@ const App = () => {
   return (
     <Router>
       <div className="container">
-        <h1 className="text-center my-4">Ferramentas de Cálculo de Investimentos</h1>
+        <h1 className="text-center my-4">Site em construção</h1>
+
+        <h1 className="text-center my-4">Ferramentas para Cálculos de Investimentos</h1>
         
         <div className="row">
           <div className="col-md-4">
